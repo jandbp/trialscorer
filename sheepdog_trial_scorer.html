@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sheepdog Trial Scorer</title>
+<title>NSDTA Scorer</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -47,15 +47,14 @@
 
   h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 28px;
+    font-size: 36px;
     color: var(--text-primary);
     line-height: 1;
     margin-bottom: 6px;
   }
 
   .subtitle {
-    font-size: 13px;
-    color: var(--text-secondary);
+    display: none;
   }
 
   .scoring-guide-link {
@@ -97,13 +96,14 @@
     line-height: 1;
     font-weight: 700;
     transition: color 0.35s;
+    letter-spacing: -0.02em;
   }
   .score-high { color: var(--green); }
   .score-mid  { color: var(--amber); }
   .score-low  { color: var(--red); }
 
   .score-label {
-    font-size: 11px;
+    font-size: 14px;
     color: var(--text-secondary);
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -120,11 +120,11 @@
   }
 
   .meta-item { text-align: center; }
-  .meta-value { font-size: 20px; font-weight: 600; color: var(--text-primary); }
-  .meta-label { font-size: 11px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px; }
+  .meta-value { font-size: 26px; font-weight: 600; color: var(--text-primary); }
+  .meta-label { font-size: 14px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px; }
 
   .deduct-label {
-    font-size: 11px;
+    font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--text-secondary);
@@ -144,10 +144,10 @@
     background: var(--bg-surface);
     border: 0.5px solid var(--border-mid);
     border-radius: var(--radius-md);
-    padding: 16px 8px;
+    padding: 20px 8px;
     cursor: pointer;
     font-family: 'Playfair Display', serif;
-    font-size: 28px;
+    font-size: 36px;
     font-weight: 700;
     color: var(--red);
     text-align: center;
@@ -161,7 +161,7 @@
   .ded-btn .btn-sub {
     display: block;
     font-family: 'Source Sans 3', sans-serif;
-    font-size: 10px;
+    font-size: 13px;
     color: var(--text-secondary);
     font-weight: 400;
     margin-top: 4px;
@@ -174,10 +174,10 @@
     background: var(--bg-surface);
     border: 0.5px solid var(--red-border);
     border-radius: var(--radius-md);
-    padding: 13px;
+    padding: 16px;
     cursor: pointer;
     font-family: inherit;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 600;
     color: var(--red);
     transition: background 0.1s;
@@ -197,9 +197,9 @@
     background: none;
     border: 0.5px solid var(--border-mid);
     border-radius: var(--radius-md);
-    padding: 9px;
+    padding: 12px;
     font-family: inherit;
-    font-size: 13px;
+    font-size: 16px;
     color: var(--text-secondary);
     cursor: pointer;
     transition: background 0.15s;
@@ -208,7 +208,7 @@
   .action-btn:disabled { opacity: 0.3; cursor: default; }
 
   .log-heading {
-    font-size: 11px;
+    font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--text-secondary);
@@ -235,8 +235,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 9px 14px;
-    font-size: 13px;
+    padding: 11px 14px;
+    font-size: 16px;
     border-bottom: 0.5px solid var(--border);
     background: var(--bg-surface);
   }
@@ -256,10 +256,10 @@
     background: var(--bg-surface);
     border: 0.5px solid var(--border-mid);
     border-radius: var(--radius-md);
-    padding: 14px 8px;
+    padding: 16px 8px;
     cursor: pointer;
     font-family: inherit;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     color: var(--text-primary);
     text-align: center;
@@ -273,7 +273,7 @@
 
   .obs-name {
     display: block;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 4px;
@@ -282,18 +282,17 @@
   .obs-pts {
     display: block;
     font-family: 'Playfair Display', serif;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 700;
     color: var(--amber);
   }
 
   .obs-sub {
     display: block;
-    font-size: 10px;
+    font-size: 12px;
     color: var(--text-secondary);
-    margin-top: 3px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    margin-top: 4px;
+    letter-spacing: 0.03em;
   }
 
   .section-divider {
@@ -303,8 +302,8 @@
   }
 
   @media (max-width: 400px) {
-    .score-number { font-size: 72px; }
-    .ded-btn { font-size: 22px; padding: 14px 6px; }
+    .score-number { font-size: 80px; }
+    .ded-btn { font-size: 28px; padding: 16px 6px; }
     .obstacle-grid { grid-template-columns: repeat(3, 1fr); }
   }
 </style>
@@ -313,7 +312,7 @@
 <div class="container">
 
   <div class="header">
-    <h1>Sheepdog Trial Scorer</h1>
+    <h1>NSDTA Scorer</h1>
     <p class="subtitle">Australian ANKC/ASBCA — starts at 100 points</p>
     <a class="scoring-guide-link" href="#" target="_blank">View scoring guide →</a>
   </div>
@@ -346,22 +345,21 @@
   </div>
 
   <hr class="section-divider">
-  <p class="deduct-label">Obstacles not completed</p>
   <div class="obstacle-grid">
     <button class="obs-btn" id="obs-race" onclick="obstacleNotCompleted('race', 7)">
       <span class="obs-name">Race</span>
       <span class="obs-pts">−7</span>
-      <span class="obs-sub">points</span>
+      <span class="obs-sub">✗ not completed</span>
     </button>
     <button class="obs-btn" id="obs-bridge" onclick="obstacleNotCompleted('bridge', 8)">
       <span class="obs-name">Bridge</span>
       <span class="obs-pts">−8</span>
-      <span class="obs-sub">points</span>
+      <span class="obs-sub">✗ not completed</span>
     </button>
     <button class="obs-btn" id="obs-pen" onclick="obstacleNotCompleted('pen', 10)">
       <span class="obs-name">Pen</span>
       <span class="obs-pts">−10</span>
-      <span class="obs-sub">points</span>
+      <span class="obs-sub">✗ not completed</span>
     </button>
   </div>
 
@@ -386,8 +384,13 @@
 
   function updateDisplay() {
     const el = document.getElementById('score-number');
-    el.textContent = Math.max(score, 0);
-    el.className = 'score-number ' + (score >= 70 ? 'score-high' : score >= 40 ? 'score-mid' : 'score-low');
+    if (disqualified) {
+      el.textContent = 'DQ';
+      el.className = 'score-number score-low';
+    } else {
+      el.textContent = Math.max(score, 0);
+      el.className = 'score-number ' + (score >= 70 ? 'score-high' : score >= 40 ? 'score-mid' : 'score-low');
+    }
     document.getElementById('stat-deducted').textContent = totalDeducted;
     document.getElementById('stat-faults').textContent = faultCount;
     document.getElementById('undo-btn').disabled = log.length === 0;
