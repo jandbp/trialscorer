@@ -30,7 +30,7 @@
     background: var(--bg-page);
     color: var(--text-primary);
     min-height: 100vh;
-    padding: 2rem 1rem 4rem;
+    padding: 1rem 1rem 2rem;
   }
 
   .container {
@@ -40,75 +40,71 @@
 
   .header {
     text-align: center;
-    margin-bottom: 1.75rem;
-    padding-bottom: 1.25rem;
-    border-bottom: 0.5px solid var(--border);
+    margin-bottom: 0.75rem;
+    background: #2150a0;
+    border-radius: var(--radius-lg);
+    padding: 0.75rem 1rem;
   }
 
   h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    color: var(--text-primary);
+    font-size: 42px;
+    color: #ffffff;
     line-height: 1;
-    margin-bottom: 6px;
-  }
-
-  .subtitle {
-    display: none;
   }
 
   .scoring-guide-link {
     display: inline-block;
-    margin-top: 10px;
-    font-size: 13px;
-    color: var(--green);
+    margin-top: 4px;
+    font-size: 15px;
+    color: #c8d8f8;
     text-decoration: none;
-    border-bottom: 0.5px solid var(--green);
-    opacity: 0.85;
+    border-bottom: 0.5px solid #7aaaf0;
+    opacity: 0.9;
   }
-  .scoring-guide-link:hover { opacity: 1; }
+  .scoring-guide-link:hover { opacity: 1; color: #fff; }
 
   .disq-banner {
     display: none;
     background: var(--red-light);
     border: 0.5px solid var(--red-border);
     border-radius: var(--radius-md);
-    padding: 12px 16px;
-    font-size: 15px;
+    padding: 10px 14px;
+    font-size: 18px;
     color: var(--red);
     font-weight: 600;
     text-align: center;
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.75rem;
   }
 
   .score-card {
     background: var(--bg-surface);
     border-radius: var(--radius-lg);
     border: 0.5px solid var(--border);
-    padding: 2rem 1.5rem 1.5rem;
+    padding: 1rem 1.25rem 0.75rem;
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
   }
 
   .score-number {
     font-family: 'Playfair Display', serif;
-    font-size: 96px;
+    font-size: 110px;
     line-height: 1;
     font-weight: 700;
     transition: color 0.35s;
     letter-spacing: -0.02em;
   }
-  .score-high { color: var(--green); }
-  .score-mid  { color: var(--amber); }
-  .score-low  { color: var(--red); }
+  .score-high { color: #2150a0; }
+  .score-mid  { color: #2150a0; }
+  .score-low  { color: #2150a0; }
 
   .score-label {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--text-secondary);
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    margin-top: 6px;
-    margin-bottom: 1.25rem;
+    margin-top: 2px;
+    margin-bottom: 0.75rem;
   }
 
   .score-meta {
@@ -116,38 +112,38 @@
     justify-content: center;
     gap: 2rem;
     border-top: 0.5px solid var(--border);
-    padding-top: 1rem;
+    padding-top: 0.75rem;
   }
 
   .meta-item { text-align: center; }
-  .meta-value { font-size: 26px; font-weight: 600; color: var(--text-primary); }
-  .meta-label { font-size: 14px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px; }
+  .meta-value { font-size: 30px; font-weight: 600; color: var(--text-primary); }
+  .meta-label { font-size: 15px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 1px; }
 
   .deduct-label {
-    font-size: 15px;
+    font-size: 17px;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     color: var(--text-secondary);
     font-weight: 600;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   .deduct-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
-    margin-bottom: 10px;
+    gap: 8px;
+    margin-bottom: 8px;
   }
 
   .ded-btn {
     background: var(--bg-surface);
     border: 0.5px solid var(--border-mid);
     border-radius: var(--radius-md);
-    padding: 20px 8px;
+    padding: 16px 4px;
     cursor: pointer;
     font-family: 'Playfair Display', serif;
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 700;
     color: var(--red);
     text-align: center;
@@ -164,8 +160,8 @@
     font-size: 13px;
     color: var(--text-secondary);
     font-weight: 400;
-    margin-top: 4px;
-    letter-spacing: 0.05em;
+    margin-top: 3px;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
   }
 
@@ -174,22 +170,22 @@
     background: var(--bg-surface);
     border: 0.5px solid var(--red-border);
     border-radius: var(--radius-md);
-    padding: 16px;
+    padding: 14px;
     cursor: pointer;
     font-family: inherit;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     color: var(--red);
     transition: background 0.1s;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
   }
   .disq-btn:hover { background: var(--red-light); }
   .disq-btn:disabled { opacity: 0.35; cursor: not-allowed; }
 
   .actions {
     display: flex;
-    gap: 10px;
-    margin-bottom: 1.5rem;
+    gap: 8px;
+    margin-bottom: 0.75rem;
   }
 
   .action-btn {
@@ -199,7 +195,7 @@
     border-radius: var(--radius-md);
     padding: 12px;
     font-family: inherit;
-    font-size: 16px;
+    font-size: 18px;
     color: var(--text-secondary);
     cursor: pointer;
     transition: background 0.15s;
@@ -208,25 +204,25 @@
   .action-btn:disabled { opacity: 0.3; cursor: default; }
 
   .log-heading {
-    font-size: 14px;
+    font-size: 16px;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     color: var(--text-secondary);
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .log-list {
     border: 0.5px solid var(--border);
     border-radius: var(--radius-md);
     overflow: hidden;
-    max-height: 200px;
+    max-height: 220px;
     overflow-y: auto;
   }
 
   .log-empty {
-    padding: 16px;
-    font-size: 13px;
+    padding: 14px;
+    font-size: 16px;
     color: var(--text-secondary);
     text-align: center;
   }
@@ -235,31 +231,31 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 11px 14px;
-    font-size: 16px;
+    padding: 10px 14px;
+    font-size: 17px;
     border-bottom: 0.5px solid var(--border);
     background: var(--bg-surface);
   }
   .log-item:last-child { border-bottom: none; }
   .log-item:nth-child(even) { background: var(--bg-subtle); }
-  .log-num { color: var(--text-secondary); min-width: 24px; font-size: 12px; }
+  .log-num { color: var(--text-secondary); min-width: 26px; font-size: 14px; }
   .log-pts { font-weight: 600; color: var(--red); }
 
   .obstacle-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-bottom: 1.5rem;
+    gap: 8px;
+    margin-bottom: 0.75rem;
   }
 
   .obs-btn {
     background: var(--bg-surface);
     border: 0.5px solid var(--border-mid);
     border-radius: var(--radius-md);
-    padding: 16px 8px;
+    padding: 12px 6px;
     cursor: pointer;
     font-family: inherit;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     color: var(--text-primary);
     text-align: center;
@@ -273,38 +269,31 @@
 
   .obs-name {
     display: block;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }
 
   .obs-pts {
     display: block;
     font-family: 'Playfair Display', serif;
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 700;
     color: var(--amber);
   }
 
   .obs-sub {
     display: block;
-    font-size: 12px;
+    font-size: 13px;
     color: var(--text-secondary);
-    margin-top: 4px;
-    letter-spacing: 0.03em;
+    margin-top: 3px;
   }
 
   .section-divider {
     border: none;
     border-top: 0.5px solid var(--border);
-    margin: 0 0 1.25rem;
-  }
-
-  @media (max-width: 400px) {
-    .score-number { font-size: 80px; }
-    .ded-btn { font-size: 28px; padding: 16px 6px; }
-    .obstacle-grid { grid-template-columns: repeat(3, 1fr); }
+    margin: 0 0 0.75rem;
   }
 </style>
 </head>
@@ -313,7 +302,6 @@
 
   <div class="header">
     <h1>NSDTA Scorer</h1>
-    <p class="subtitle">Australian ANKC/ASBCA — starts at 100 points</p>
     <a class="scoring-guide-link" href="#" target="_blank">View scoring guide →</a>
   </div>
 
@@ -337,11 +325,11 @@
   <p class="deduct-label">Deduct points</p>
 
   <div class="deduct-grid">
-    <button class="ded-btn" onclick="deduct(1)">−1<span class="btn-sub">point</span></button>
-    <button class="ded-btn" onclick="deduct(2)">−2<span class="btn-sub">points</span></button>
-    <button class="ded-btn" onclick="deduct(3)">−3<span class="btn-sub">points</span></button>
-    <button class="ded-btn" onclick="deduct(4)">−4<span class="btn-sub">points</span></button>
-    <button class="ded-btn" onclick="deduct(5)">−5<span class="btn-sub">points</span></button>
+    <button class="ded-btn" onclick="deduct(1)">−1<span class="btn-sub">pt</span></button>
+    <button class="ded-btn" onclick="deduct(2)">−2<span class="btn-sub">pts</span></button>
+    <button class="ded-btn" onclick="deduct(3)">−3<span class="btn-sub">pts</span></button>
+    <button class="ded-btn" onclick="deduct(4)">−4<span class="btn-sub">pts</span></button>
+    <button class="ded-btn" onclick="deduct(5)">−5<span class="btn-sub">pts</span></button>
   </div>
 
   <hr class="section-divider">
@@ -349,17 +337,17 @@
     <button class="obs-btn" id="obs-race" onclick="obstacleNotCompleted('race', 7)">
       <span class="obs-name">Race</span>
       <span class="obs-pts">−7</span>
-      <span class="obs-sub">✗ not completed</span>
+      <span class="obs-sub">not completed</span>
     </button>
     <button class="obs-btn" id="obs-bridge" onclick="obstacleNotCompleted('bridge', 8)">
       <span class="obs-name">Bridge</span>
       <span class="obs-pts">−8</span>
-      <span class="obs-sub">✗ not completed</span>
+      <span class="obs-sub">not completed</span>
     </button>
     <button class="obs-btn" id="obs-pen" onclick="obstacleNotCompleted('pen', 10)">
       <span class="obs-name">Pen</span>
       <span class="obs-pts">−10</span>
-      <span class="obs-sub">✗ not completed</span>
+      <span class="obs-sub">not completed</span>
     </button>
   </div>
 
@@ -386,10 +374,10 @@
     const el = document.getElementById('score-number');
     if (disqualified) {
       el.textContent = 'DQ';
-      el.className = 'score-number score-low';
+      el.style.color = '#A32D2D';
     } else {
       el.textContent = Math.max(score, 0);
-      el.className = 'score-number ' + (score >= 70 ? 'score-high' : score >= 40 ? 'score-mid' : 'score-low');
+      el.style.color = '#2150a0';
     }
     document.getElementById('stat-deducted').textContent = totalDeducted;
     document.getElementById('stat-faults').textContent = faultCount;
